@@ -1,0 +1,61 @@
+@media(max-width: $mobile-width-only){
+    .js-button-burger{
+        position: absolute;
+        top:0;
+        right: 0;
+        display: block;
+        width: 56px;
+        height: 56px;
+        font-size: 0;
+        background-color: $link-bg-color;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    
+        &::before{
+            content: "";
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            width: 32px;
+            height: 4px;
+            background-color: #ffffff;
+            transition: all 0.3s ease 0s;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            left: 32px;
+            top: 40px;
+            width: 12px;
+            height: 4px;
+            background-color: #ffffff;
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    .js-button-burger.js-button-burger--active{
+        &::before{
+            content: "";
+            top: 25px;
+            left: 14px;
+            transform: rotate(45deg);
+            transition: all 0.3s ease 0s;
+    }
+
+        &::after{
+            content: "";
+            top: 25px;
+            left: 14px;
+            width: 32px;
+            transform: rotate(-45deg);
+         transition: all 0.3s ease 0s;
+            
+        }
+
+        .js-button-burger__span--active{
+            display: none;
+        }  
+    }
+}

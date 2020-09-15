@@ -1,0 +1,16 @@
+
+.social-list{
+
+    &--header{
+        display: none;
+
+        @media(min-width: $desktop-width-1000px){
+            display: flex;
+            @include list-style-reset;
+        }
+    }
+}
+
+.social-list__item--header:not(:last-child){
+    margin-right: 17px;
+}

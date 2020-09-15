@@ -1,0 +1,117 @@
+/*greeting
+greeting__title
+greeting__text
+greeting__list
+greeting__item
+greeting__link*/
+
+.greeting{
+    position: relative;
+    z-index: 10;
+    padding: 22px 20px 18px 20px;
+    background-color: $main-color;
+
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: -2;
+        top:138px;
+        left: 0;
+        right: 0;
+        margin:auto;
+        width: 320px;
+        height: 268px;
+        background-image: url("../img/greeting-mobile-bg@1x.png");
+        background-repeat: no-repeat;
+
+        @media(min-width: 320px){
+            @media(min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+                background-image: url("../img/greeting-mobile-bg@2x.png");
+                background-repeat: no-repeat;
+                background-size: 320px 263px;
+            }
+        }
+
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 91px;
+        left: 0;
+        right: 0;
+        margin:auto;
+        width: 208px;
+        height: 298px;
+        background-image: url("../img/anastasia-mobile-bg@1x.png");
+        background-repeat: no-repeat;
+        
+
+        @media(min-width: 320px){
+            @media(min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+                background-image: url("../img/anastasia-mobile-bg@2x.png");
+                background-repeat: no-repeat;
+                background-size: 208px 298px;
+            }
+        }
+    }
+}
+
+.greeting__title{
+    position: relative;
+    margin-bottom: 8px;
+    @include fontGuerrila(30px, 36px); //$font-size, $line-height
+    text-align: center;
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        width: 140px;
+        height: 2px;
+        margin: auto;
+        background-color:#ffffff;
+    }
+}
+
+.greeting__text{
+    margin-bottom: 228px;
+    @include fontGuerrila(20px, 24px);//$font-size, $line-height
+    text-align: center;
+}
+
+.greeting__list{
+    @include list-style-reset;
+}
+
+.greeting__item:not(:last-child){
+    margin-bottom: 10px;
+ }
+
+.greeting__link{
+    display: block;
+    padding: 16px 0;
+    @include fontGuerrila(20px, 24px);//$font-size, $line-height
+    text-align: center;
+    border-radius: 25px;
+    background-color:$link-bg-color;
+    border: 2px solid $link-bg-color;
+    transition: all 0.3s ease 0s;
+
+    &:hover,
+    &:focus{
+        background-color:transparent;
+        border: 2px solid $link-bg-color;
+        transition: all 0.3s ease 0s;
+    }
+
+    &:hover:first-child,
+    &:focus:first-child{
+        background-color:$main-color;
+    }
+}
+

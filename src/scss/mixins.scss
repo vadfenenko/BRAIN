@@ -1,0 +1,32 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("/fonts/#{$file_name}.woff2") format("woff2"), url("/fonts/#{$file_name}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+}
+
+@mixin list-style-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin fontGuerrila($font-size, $line-height){
+   font-family: "Guerilla", "Arial", sans-serif;
+   font-size: $font-size;
+   font-style: normal;
+   font-weight: normal;
+   line-height: $line-height;
+   color: #FFFFFF;  
+}
+
+@mixin fontRoughDraftCY($font-size, $line-height){
+    font-family: "RoughDraftCY", "Arial", sans-serif;
+    font-size: $font-size;
+    line-height: $line-heigh;
+    font-style: normal;
+    color: #FFFFFF;  
+}

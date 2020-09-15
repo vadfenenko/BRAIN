@@ -1,0 +1,14 @@
+.main-header{
+    
+    @media(min-width: $desktop-width-1000px){
+        padding-left: 17px;
+        padding-right: 20px;
+    }
+
+    @media(min-width: $desktop-width-1920px){
+        padding-left: 360px;
+        padding-right: 350px;
+    }
+
+}
+
