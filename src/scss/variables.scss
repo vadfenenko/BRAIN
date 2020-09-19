@@ -4,8 +4,10 @@ $mobile-width-only: 999px;
 $tablet-width: 768px;
 $desktop-width-1000px: 1000px;
 $desktop-width-1920px: 1920px;
-$retina-dpi: 144dpi;
+$retina-dpi: 144dpi; //default 1 css px = 96dpi (96+48=144)
 $retina-dppx: 1.5dppx;
+$retina-dpi-3x: 388dpi;
+$retina-dppx-3x: 3dppx;
 
 //COLOR
 $main-color: #002E44;
