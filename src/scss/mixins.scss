@@ -30,3 +30,11 @@
     font-style: normal;
     color: #FFFFFF;  
 }
+
+/*@mixin image($width, $height, $url) {
+    width: $width;
+    height: $height;
+    background-size: $width $height;
+    background-repeat:no-repeat;
+    background-image:url($url);
+}*/
