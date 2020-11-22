@@ -1,5 +1,5 @@
 @media(max-width: $mobile-width-only){
-    .js-button-burger{
+    .button-burger--onJS{
         position: absolute;
         top:0;
         right: 0;
@@ -11,7 +11,7 @@
         border: none;
         outline: none;
         cursor: pointer;
-    
+
         &::before{
             content: "";
             position: absolute;
@@ -35,7 +35,7 @@
         }
     }
 
-    .js-button-burger.js-button-burger--active{
+    .button-burger--onJS.js-button-burger--active{
         &::before{
             content: "";
             top: 25px;
@@ -59,3 +59,5 @@
         }  
     }
 }
+
+   

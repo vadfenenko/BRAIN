@@ -1,6 +1,5 @@
 
 .social-list{
-
     &--header{
         display: none;
 
@@ -13,4 +12,62 @@
 
 .social-list__item--header:not(:last-child){
     margin-right: 17px;
+}
+
+.social-list--footer{
+    @include list-style-reset;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: -27px;
+
+    @media (min-width: $tablet-width){
+        margin-bottom: 13px;
+    } 
+
+    @media (min-width: $desktop-width-1000px){
+        margin-bottom: 16px;
+    } 
+}
+
+.social-list__item--footer{
+    margin-right: 27px;
+}
+
+.social__contener{
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+
+    @media (min-width: $tablet-width){
+        width: 712px;
+        margin: 0 auto;
+    }
+}
+
+.social__text{
+    color: $footer-text-color;
+
+    &--numer{
+        margin-bottom: 18px;
+        font-size: 12px;
+        line-height: 14px;
+
+        @media (min-width: $tablet-width){
+            width: 220px;
+            text-align: left;
+            margin: 0 0 -20px auto;   
+        } 
+    }
+
+    &--copyright{
+
+        @media (min-width: $tablet-width){
+            width: 209px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            margin: 0 auto; 
+        } 
+    }  
 }

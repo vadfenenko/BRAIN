@@ -23,32 +23,82 @@
  
     @media(min-width: $desktop-width-1000px){
         flex: 0 0 56px;
+        margin-right: 216px;
     }
 }
 
 .menu__scroll{
+    
     @media(max-width: $mobile-width-only){
-         background-color:$main-color;
-     }
-     
-     @media(min-width: $desktop-width-1000px){
-         display: flex;
-         flex-wrap: wrap;
-     }
+        display: block; // change display:none in CRITICAL CSS
+        position: relative;
+        overflow: hidden;
+    }
+
+   @media(min-width: $desktop-width-1000px){
+        flex: 1 0 420px;
+        margin-right: 115px;
+    }  
 }
 
 .menu__list{
     @include list-style-reset;
+
+    &--header{
+        @media(max-width: $mobile-width-only){
+            position: relative;
+            z-index: 10;
+            top: 0;
+            bottom:0;
+            height: auto;
+            padding-top: 125px;
+            padding-bottom: 177px;
+            overflow-y: auto;
+            background-color:$main-color;
+        }
+
+        @media(min-width: $desktop-width-1000px){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &::before{
+            @media(max-width: $mobile-width-only){
+                content: "";
+                position: absolute;
+                z-index: -1;
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 190px;
+                background-image: url("../img/g3clU01men1.png");
+                background-position: -10px 0;
+                background-repeat: no-repeat;
+            }
+        }
+    
+        &::after{
+            @media(max-width: $mobile-width-only){
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                bottom: 35px;
+                width: 100%;
+                height: 210px;
+                background-image: url("../img/ya_lab_pic_566146f846d83lermontov 2.png");
+                background-repeat: no-repeat;
+                background-position: 110px 56px;
+            }
+        }
+    }   
 }
 
 .menu__item{
     &--header:not(:last-child){
         @media(max-width: $mobile-width-only){
             margin-bottom: 1px;
-        }
-
-        @media(min-width: $desktop-width-1000px){
-            margin-right: 100px;
         }
     }   
 }

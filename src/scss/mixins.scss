@@ -8,7 +8,7 @@
     }
 }
 
-@mixin list-style-reset {
+@mixin list-style-reset {  //@include list-style-reset;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -26,15 +26,30 @@
 @mixin fontRoughDraftCY($font-size, $line-height){
     font-family: "RoughDraftCY", "Arial", sans-serif;
     font-size: $font-size;
-    line-height: $line-heigh;
+    line-height: $line-height;
     font-style: normal;
     color: #FFFFFF;  
 }
 
-/*@mixin image($width, $height, $url) {
+@mixin visually-hidden { //@include visually-hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/*@mixin image($width, $height, $url) {  //@include image;
     width: $width;
     height: $height;
     background-size: $width $height;
     background-repeat:no-repeat;
     background-image:url($url);
 }*/
+
+//сделать миксин для подсветки и очерданий рабочей зоны

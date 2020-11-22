@@ -1,25 +1,31 @@
 let onJSmenu = document.querySelector('#burger');
-onJSmenu.classList.add('js-button-burger');
+onJSmenu.classList.remove('button-burger', 'button-burger--ofJS');
 
 let hiddenMenuOnJs = document.querySelector('.menu__list--header');
 hiddenMenuOnJs.classList.add('js-menu__list');
 
-let toggleButton = function () {
+let listLink = document.querySelector('.menu__list');
+let bodyLocked = document.querySelector('body');
+let nav = document.querySelector('.menu');
+let lineHorizontal = document.querySelector('.button-burger__span');
 
-    let lineHorizontal = document.querySelector('.button-burger__span');
+let toggleMenu = function () {
     lineHorizontal.classList.toggle('js-button-burger__span--active');
-
     onJSmenu.classList.toggle('js-button-burger--active');
-
     hiddenMenuOnJs.classList.toggle('js-menu__list--active');
-
-    let bodyLocked = document.querySelector('body');
     bodyLocked.classList.toggle('locked');
-
-    let nav = document.querySelector('.menu');
     nav.classList.toggle('js-menu--active');
-
 };
 
-onJSmenu.addEventListener('click', toggleButton);
+let remoweMenuActive = function (event) {
+    if (event.target.classList.contains('menu__link') && hiddenMenuOnJs.classList.contains('js-menu__list--active')) {
+        lineHorizontal.classList.toggle('js-button-burger__span--active');
+        onJSmenu.classList.toggle('js-button-burger--active');
+        hiddenMenuOnJs.classList.toggle('js-menu__list--active');
+        bodyLocked.classList.toggle('locked');
+        nav.classList.toggle('js-menu--active');
+    }
+}
 
+onJSmenu.addEventListener('click', toggleMenu);
+listLink.addEventListener('click', remoweMenuActive);

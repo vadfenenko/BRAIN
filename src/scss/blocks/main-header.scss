@@ -1,8 +1,13 @@
 .main-header{
-    
     @media(min-width: $desktop-width-1000px){
+        position: fixed;
+        z-index: 5000;
+        top:0;
+        left: 0;
+        width: 100%;
         padding-left: 17px;
         padding-right: 20px;
+        background-color: #ffffff;
     }
 
     @media(min-width: $desktop-width-1920px){
