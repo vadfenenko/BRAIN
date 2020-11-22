@@ -1,0 +1,238 @@
+
+.popup{
+    position: fixed;
+    z-index: 6000;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;   
+}
+
+.js-popup{
+    display: flex;
+}
+
+.popup__inner{
+    width: (300px / 320px * 100%);
+    
+    @media (min-width: $tablet-width){
+        display: flex;
+        padding: 16px;
+        width: 632px;
+        border: 3px dashed red;
+    } 
+}
+
+.popup__image{
+    display: none;
+
+    @media (min-width: $tablet-width){
+        position: relative;
+        display: block;
+        flex: 0 0 50%;
+        overflow: hidden;
+    } 
+}
+
+.popup__image picture{
+   position: absolute;
+   top: 0px;
+   right: -10px;
+   height: 385px;
+   width: 440px;
+}
+
+.popup__content{
+    position: relative;
+    padding: 32px 17px 23px 13px;
+    background-color: #ffffff;
+
+    @media (min-width: $tablet-width){
+        flex: 0 0 50%;
+    } 
+}
+
+.popup__title{
+    position: relative;
+    margin: 0 0 35px 0;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #000000;
+
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        width: 171px;
+        height: 2px;
+        margin: auto;
+        background-color: $link-bg-color;
+    }
+}
+
+.popup__contener{
+    display: flex;
+}
+
+.popup__input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border:1px solid #EA3838;
+    border-radius: 0;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &:hover,
+    &:focus{
+        box-shadow: 0 0 0 2px #EA3838;
+        transition: all 0.3s ease 0s;
+    }
+
+    &--name{
+        margin: 0 10px 0 0;
+    }
+}
+
+.popup__input:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.popup__input:last-child{
+    margin: 0 0 16px 0;
+}
+
+.popup__item--checkbox{
+    margin: 0 0 28px 0;
+}
+
+.popup__label{
+    display: block;
+    padding-left: 30px;
+    font-size: 10px;
+    line-height: 12px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.popup__checkbox{
+    @include visually-hidden;
+}
+
+.popup_span{
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -30px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #EA3838;
+    transition: all 0.3s ease 0s;
+
+    &:hover{
+        box-shadow: 0 0 0 2px #EA3838;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.popup__checkbox:checked + .popup_span{
+    background-image: url("../img/icon/ok.svg");
+}
+
+.popup__checkbox:focus + .popup_span{
+    border: 2px solid  #EA3838;
+}
+
+.popup__button{
+    display: block;
+    width: 100%;
+    padding: 11px 0;
+    font-family: inherit;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    background-color: $link-bg-color;
+    border-radius: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &:hover,
+    &:focus{
+        opacity: 0.4;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.popup__button-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width){
+        top: 0px;
+        right: 0px;
+        background-color:  #EA3838;
+    } 
+
+    &:hover,
+    &:focus{
+        opacity: 0.4;
+    }
+
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #EA3838;
+        transform: rotate(-45deg);
+        transition: all 0.3s ease 0s;
+
+        @media (min-width: $tablet-width){
+            background-color:  #ffffff;
+        }
+    }
+
+    &::after{
+        content: "";
+        bottom:13px;
+        transform: rotate(45deg);
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after{
+        background-color: $link-bg-color;
+        transition: all 0.3s ease 0s;
+        
+        @media (min-width: $tablet-width){
+            background-color:#ffffff;
+        }
+    }
+}
+
+
