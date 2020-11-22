@@ -1,6 +1,12 @@
 
-.button-burger{
+.button-burger.button-burger--ofJS{ 
         display: none;
+}
+
+.button-burger--onJS{
+        @media(min-width: $desktop-width-1000px){
+                display: none;
+        }
 }
 
 @media(max-width: $mobile-width-only){
