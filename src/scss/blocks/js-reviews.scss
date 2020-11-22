@@ -1,0 +1,58 @@
+.js-reviews__box{
+   position: relative;
+    height: 505px;
+    margin: 0 0 12px 0;
+
+    @media (min-width: $mobile-width){
+        display: flex;
+        justify-content: center;
+        height: auto;
+        margin: 0 -7px 12px -7px;
+        overflow: hidden;
+    }
+
+    @media (min-width: $desktop-width-1000px){
+        flex-wrap: wrap;
+        margin: 0 -20px -30px 0;
+    }
+}
+
+.js-reviews__item{
+    position: absolute;
+    height: 100%;
+  
+    @media (max-width: 479px){
+        display: none;
+    } 
+ 
+    @media (min-width: $mobile-width){
+        position: static;
+        flex: 0 0 62%;
+        height: auto;
+        margin-right: 20px;
+    }
+    
+    @media (min-width: $tablet-width){
+        flex: 0 0 40%;
+    } 
+
+    @media (min-width: $desktop-width-1000px){
+        flex: 0 0 31%;
+        margin-bottom: 30px;   
+    }
+
+    @media (min-width: $desktop-width-1920px){
+        flex: 0 0 376px;
+    }
+}
+
+.js-reviews__controls{
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $desktop-width-1000px){
+        display:none;
+    }
+}
+
+
